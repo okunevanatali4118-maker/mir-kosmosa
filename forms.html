@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1> Мир космоса</h1>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="planets.html">Планеты</a>
+        <a href="facts.html">Интересные факты</a>
+        <a href="missions.html">Космические миссии</a>
+        <a href="galaxies.html">Галактики и звёзды</a>
+        <a href="moon.html">Луна</a>
+        <a href="forms.html" class="active">Формы</a>
+  <a href="dom.html">DOM_JS</a>
+  <a href="change.html">Изменение текста</a>
+    <a href="task.html">Алгоритмическая задача</a>
+          <a href="https://science.nasa.gov/" target="_blank" rel="noopener noreferrer">Сайт NASA ↗</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <h2>Формы обратной связи</h2>
+        <p>Заполни учебные формы, посвящённые исследованию космоса.</p>
+    </section>
+
+    <section class="card">
+        <h2>Форма 1. Контактная информация</h2>
+
+        <form action="https://www.google.com/search"
+      method="get"
+      target="_blank">
+
+            <p>
+                Фамилия:
+                <input type="text" name="surname"
+                       placeholder="Например, Иванов" required>
+            </p>
+
+            <p>
+                Имя:
+                <input type="text" name="firstname"
+                       placeholder="Например, Иван" required>
+            </p>
+
+            <p>
+                Учебная группа:
+                <input type="text" name="student_group"
+                       placeholder="Например, КС-01">
+            </p>
+
+            <p>
+                Номер телефона:
+                <input type="tel" name="mobile"
+                       placeholder="+7 900 000-00-00">
+            </p>
+
+            <p>
+                Электронная почта:
+                <input type="email" name="email"
+                       placeholder="student@example.com" required>
+            </p>
+
+            <p>
+                Дата заполнения:
+                <input type="date" name="message_date"
+                       value="2026-10-18">
+            </p>
+
+            <p>
+                Почему тебе интересен космос?
+                <br>
+                <textarea name="message" rows="4"
+                          placeholder="Напиши свой ответ..."></textarea>
+            </p>
+
+            <input type="submit" value="Отправить">
+            <input type="reset" value="Очистить">
+        </form>
+    </section>
+
+    <section class="card">
+        <h2>Форма 2. Заказ космического плаката</h2>
+
+        <form action="https://www.google.com/search"
+      method="get"
+      target="_blank">
+
+            <p>
+                Имя для заказа:
+                <input type="text" name="poster_name"
+                       value="Исследователь космоса" required>
+            </p>
+
+            <p>
+                Количество плакатов:
+                <input type="number" name="quantity"
+                       min="1" max="10" value="1">
+            </p>
+
+            <p><b>Выбери размер плаката:</b></p>
+
+            <label>
+                <input type="radio" name="poster_size"
+                       value="small" checked>
+                Маленький
+            </label>
+
+            <br>
+
+            <label>
+                <input type="radio" name="poster_size"
+                       value="medium">
+                Средний
+            </label>
+
+            <br>
+
+            <label>
+                <input type="radio" name="poster_size"
+                       value="large">
+                Большой
+            </label>
+
+            <p>
+                <label>
+                    <input type="checkbox" name="gift_wrap"
+                           value="yes">
+                    Подарочная упаковка
+                </label>
+            </p>
+
+            <p>
+                Дата доставки:
+                <input type="date" name="delivery_date">
+            </p>
+
+            <p>
+                Код заказа:
+                <input type="password" name="order_code"
+                       placeholder="Учебный код">
+            </p>
+
+            <input type="hidden" name="order_source"
+                   value="space_project">
+
+            <input type="submit" value="Отправить заказ">
+            <input type="reset" value="Очистить">
+        </form>
+    </section>
+
+    <p><a href="#top">↑ К началу страницы</a></p>
+</main>
+
+<footer>
+    Учебный проект «Мир космоса» · 2026
+</footer>
+
+</body>
+</html>

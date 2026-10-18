@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Решение алгоритмической задачи</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🚀 Мир космоса</h1>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="planets.html">Планеты</a>
+    <a href="facts.html">Интересные факты</a>
+    <a href="missions.html">Космические миссии</a>
+    <a href="galaxies.html">Галактики и звёзды</a>
+    <a href="moon.html">Луна</a>
+    <a href="forms.html">Формы</a>
+    <a href="dom.html">DOM_JS</a>
+    <a href="change.html">Изменение текста</a>
+    <a href="task.html" class="active">Алгоритмическая задача</a>
+    <a href="https://science.nasa.gov/" target="_blank" rel="noopener noreferrer">Сайт NASA ↗</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h2>Решение алгоритмической задачи</h2>
+    <p>
+      Можно ли в квадратном зале площадью S поместить
+      круглую сцену радиусом R так, чтобы от стены до
+      сцены был проход не менее K?
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Введи исходные данные</h2>
+
+    <label for="S">Площадь зала S:</label>
+    <input id="S" type="number" min="0" step="any" value="100">
+
+    <label for="R">Радиус сцены R:</label>
+    <input id="R" type="number" min="0" step="any" value="3">
+
+    <label for="K">Ширина прохода K:</label>
+    <input id="K" type="number" min="0" step="any" value="2">
+
+    <p>
+      <button type="button" id="solve">Решить задачу</button>
+    </p>
+
+    <h2>Результат</h2>
+    <p id="result">Нажми кнопку, чтобы получить ответ.</p>
+  </section>
+</main>
+
+<script>
+document.getElementById("solve").addEventListener("click", function () {
+  const S = Number(document.getElementById("S").value);
+  const R = Number(document.getElementById("R").value);
+  const K = Number(document.getElementById("K").value);
+
+  const result = document.getElementById("result");
+
+  if (
+    document.getElementById("S").value === "" ||
+    document.getElementById("R").value === "" ||
+    document.getElementById("K").value === "" ||
+    S <= 0 || R < 0 || K < 0
+  ) {
+    result.textContent = "Нет";
+    return;
+  }
+
+  if (Math.sqrt(S) / 2 - R >= K) {
+    result.textContent = "Да, сцену можно разместить. ";
+  } else {
+    result.textContent = "Нет, проход будет слишком узким.";
+  }
+});
+</script>
+
+</body>
+</html>

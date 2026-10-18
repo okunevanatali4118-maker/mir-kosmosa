@@ -1,0 +1,411 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #081225;
+  color: #f1f5ff;
+  line-height: 1.7;
+}
+
+header {
+  background: #101e3a;
+  padding: 24px 7%;
+  border-bottom: 1px solid #30466e;
+}
+
+header h1 {
+  margin: 0 0 12px;
+  color: #8fc8ff;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+nav a:hover {
+  background: #263c64;
+}
+
+nav a.active {
+  background: #8fc8ff;
+  color: #081225;
+  font-weight: bold;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 22px;
+}
+
+.hero {
+  padding: 32px;
+  background: #142747;
+  border-radius: 18px;
+}
+
+h2 {
+  color: #8fc8ff;
+}
+
+a {
+  color: #9ed5ff;
+}
+
+.card {
+  background: #142747;
+  padding: 20px;
+  margin: 18px 0;
+  border-radius: 14px;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 12px;
+}
+
+.image-link {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.button-link {
+  display: inline-block;
+  background: #8fc8ff;
+  color: #081225;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  padding: 24px;
+  text-align: center;
+  color: #b7c6df;
+  border-top: 1px solid #30466e;
+}
+
+/* Навигация внутри информационной страницы */
+.page-nav {
+  background: #101e3a;
+  padding: 15px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+}
+
+.page-nav a {
+  margin-right: 16px;
+}
+
+/* Таблица о космосе */
+.space-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #142747;
+  background-image: url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1000");
+  background-size: cover;
+  background-position: center;
+  margin: 20px 0;
+}
+
+.space-table th,
+.space-table td {
+  border: 1px solid #a9c7ed;
+  padding: 12px;
+  text-align: left;
+  background-color: rgba(8, 18, 37, 0.82);
+}
+
+.space-table img {
+  width: 90px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.thumbnail {
+  width: 90px;
+  height: auto;
+  border: 2px solid #8fc8ff;
+  border-radius: 8px;
+}
+
+.back-to-top {
+  display: block;
+  margin: 28px 0;
+}
+
+.moon-phases {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 20px 0;
+}
+
+.moon-card {
+  background: #142747;
+  padding: 16px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.moon-card img {
+  width: 100%;
+  max-width: 240px;
+  border-radius: 12px;
+}
+
+.moon-card h3 {
+  color: #8fc8ff;
+}
+
+@media (max-width: 600px) {
+  .moon-phases {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Оформление форм */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+form label {
+  font-weight: bold;
+  color: #f1f5ff;
+}
+
+form input:not([type="radio"]):not([type="checkbox"]):not([type="hidden"]) {
+  width: 100%;
+  max-width: 500px;
+  padding: 11px;
+  border: 1px solid #8fc8ff;
+  border-radius: 8px;
+  background: #081225;
+  color: #ffffff;
+  font: inherit;
+}
+
+form fieldset {
+  border: 1px solid #8fc8ff;
+  border-radius: 10px;
+  padding: 14px;
+  margin: 10px 0;
+}
+
+form legend {
+  color: #8fc8ff;
+  padding: 0 6px;
+}
+
+form .choice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+  font-weight: normal;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #8fc8ff;
+}
+
+form button {
+  align-self: flex-start;
+  margin-top: 12px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #8fc8ff;
+  color: #081225;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #b5ddff;
+}
+
+.form-note {
+  color: #b7c6df;
+  font-size: 0.9rem;
+}
+/* Страница DOM_JS и учебные макеты документа */
+
+.passport-pages {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.passport-page {
+  position: relative;
+  width: 100%;
+  min-height: 560px;
+  padding: 30px;
+  border: 2px solid #8fc8ff;
+  border-radius: 10px;
+  background-color: #f5f0e5;
+  background-image: url("https://static.tildacdn.com/tild3738-3939-4665-b538-656134633334/pasport_1.jpeg");
+  background-repeat: no-repeat;
+background-position: right top;
+background-size: 100% auto;
+  color: #17233a;
+  overflow: hidden;
+}
+
+.passport-page h3 {
+  color: #17233a;
+}
+
+.passport-page p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.passport-page span {
+  color: #17233a;
+  font-weight: bold;
+}
+
+.passport-note {
+  margin-top: 20px;
+  color: #17233a;
+  font-size: 13px;
+}
+/* Положение текста на странице 2 */
+.passport-page-2 .passport-surname {
+  position: absolute;
+  top: 45px;
+  left: 350px;
+}
+
+.passport-page-2 .passport-name {
+  position: absolute;
+  top: 155px;
+  left: 350px;
+}
+
+.passport-page-2 .passport-birth {
+  position: absolute;
+  top: 200px;
+  left: 450px;
+}
+
+/* Заголовки учебных макетов */
+.passport-page-2 h3,
+.passport-page-3 h3 {
+  margin-top: 0;
+}
+/* Верхняя страница — оставляем как есть */
+.passport-page-3 {
+  background-position: center top;
+}
+
+/* Нижняя страница — показываем нижнюю часть изображения */
+.passport-page-2 {
+  background-position: center bottom;
+}
+/* Расположение данных на странице 3 */
+.passport-page-3 .mock-photo {
+  position: absolute;
+  top: 250px;
+  left: 55px;
+}
+
+.passport-page-3 .passport-place {
+  position: absolute;
+  top: 145px;
+  left: 110px;
+}
+
+.passport-page-3 .passport-type {
+  position: absolute;
+  top: 275px;
+  left: 110px;
+}
+.passport-page-2 .passport-photo {
+  position: absolute;
+  top: 85px;
+  left:100px;
+  width: 220px;
+  height: 280px;
+  object-fit: cover;
+  border: 1px solid #8fc8ff;
+  border-radius: 4px;
+}
+
+form p {
+    margin: 18px 0;
+}
+
+form input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="reset"]):not([type="hidden"]),
+form textarea {
+    max-width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #526b91;
+    border-radius: 7px;
+    background: #081225;
+    color: #f1f5ff;
+    font: inherit;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+    accent-color: #8fc8ff;
+}
+
+form input[type="submit"],
+form input[type="reset"] {
+    padding: 10px 16px;
+    margin: 8px 8px 8px 0;
+    border: none;
+    border-radius: 8px;
+    background: #8fc8ff;
+    color: #081225;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
+    background: #b5ddff;
+}
+
+form label {
+    cursor: pointer;
+}
+.dom-screenshot {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  cursor: zoom-in;
+  border-radius: 10px;
+}

@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Изменяем кириллицу на латиницу по клику</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+<header>
+  <h1> Мир космоса</h1>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="planets.html">Планеты</a>
+    <a href="facts.html">Интересные факты</a>
+    <a href="missions.html">Космические миссии</a>
+    <a href="galaxies.html">Галактики и звёзды</a>
+    <a href="moon.html">Луна</a>
+    <a href="forms.html">Формы</a>
+    <a href="dom.html">DOM_JS</a>
+    <a href="change.html" class="active">Изменение текста</a>
+    <a href="task.html">Алгоритмическая задача</a>
+      <a href="https://science.nasa.gov/" target="_blank" rel="noopener noreferrer">Сайт NASA ↗</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h2>Изменяем кириллицу на латиницу по клику</h2>
+    <p>Нажми кнопку, чтобы изменить данные в учебных макетах.</p>
+    <button type="button" id="changeButton">Изменить данные</button>
+  </section>
+
+  <section class="card">
+  <h2>Страница 3. Основные сведения</h2>
+
+      <div class="passport-pages">
+
+       <div class="passport-page passport-page-2">
+  <h3></h3>
+
+<p class="passport-surname">
+  Фамилия: <span id="surname">Окунева</span>
+</p>
+
+<p class="passport-name">
+  Имя: <span id="firstname">Наталия</span>
+</p>
+
+<p class="passport-birth">
+  Год рождения: <span id="birthyear">2001</span>
+</p>
+<img
+  class="passport-photo"
+  src="https://sun9-51.vkuserphoto.ru/s/v1/ig2/D0xMgxEaZ28Lbp64P16fNuYMCiu2ATHHPVpb3opDTO2LDItEmwh4docdL27Pf2-Qwr3wSt0XbAFmWziXjNOABuP6.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,709x945&from=bu&u=vXlXciNMn0Js5D5CycZH354U0L7T9XjV8csXG-MdUr8&cs=709x0"
+  alt="Фотография для учебного макета документа"
+>
+          <div class="passport-note">
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Страница 3. Дополнительные сведения</h2>
+    <div class="passport-pages">
+      <div class="passport-page passport-page-3">
+        <h3></h3>
+        <div class="mock-photo"></div>
+        <p class="passport-place">Место выдачи: <span>УФМС поо Калужской области</span></p>
+        <p class="passport-type">Дата выдачи: <span>12.12.2021</span></p>
+        <div class="passport-note"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const button = document.getElementById("changeButton");
+  let isLatin = false;
+
+  button.addEventListener("click", function () {
+    if (isLatin === false) {
+      document.getElementById("surname").textContent = "Okuneva";
+      document.getElementById("firstname").textContent = "Natalia";
+      document.getElementById("birthyear").textContent = "2001";
+      button.textContent = "Вернуть кириллицу";
+      isLatin = true;
+    } else {
+      document.getElementById("surname").textContent = "Окунева";
+      document.getElementById("firstname").textContent = "Наталия";
+      document.getElementById("birthyear").textContent = "2001";
+      button.textContent = "Изменить данные";
+      isLatin = false;
+    }
+  });
+</script>
+
+</body>
+</html>
